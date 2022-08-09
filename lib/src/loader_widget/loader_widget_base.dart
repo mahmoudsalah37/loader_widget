@@ -58,6 +58,9 @@ class _LoaderWidgetState<T> extends State<LoaderWidget<T>> {
           case StateLoader.loading:
             child = widget.loadingWidget(progress);
             break;
+          case StateLoader.moreLoading:
+            child = widget.loadingWidget(progress);
+            break;
           case StateLoader.error:
             child = widget.errorWidget(exception!);
             break;

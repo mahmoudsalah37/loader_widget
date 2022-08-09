@@ -41,8 +41,9 @@ class StateController<T> implements IStateController<T> {
   @override
   void loading({double progress = 0}) {
     _progress = progress;
-    _state.value = StateLoader.empty;
-    _state.value = StateLoader.loading;
+    _state.value = _state.value == StateLoader.moreLoading
+        ? StateLoader.loading
+        : StateLoader.moreLoading;
   }
 
   @override
