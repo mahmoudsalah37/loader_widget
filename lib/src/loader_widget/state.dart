@@ -1,1 +1,1 @@
-enum StateLoader { empty, loading, error, finished }
+enum StateLoader { empty, loading, moreLoading, error, finished }
